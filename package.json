@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start-async": "node async-scraper.js",
+    "start-sync": "node sync-scraper.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,8 +19,8 @@
   },
   "homepage": "https://github.com/perinikhil/web-scraper#readme",
   "dependencies": {
+    "async": "^2.1.2",
     "cheerio": "^0.22.0",
-    "express": "^4.14.0",
     "request": "^2.76.0"
   }
 }
