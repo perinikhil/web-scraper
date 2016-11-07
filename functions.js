@@ -81,6 +81,7 @@ function requestCallbackSync (err, res, html) {
     const uniqLinks = getUniqueLinksSync(links);
 
     writeToFile(process.argv[2], uniqLinks.join(',\n'));
+    return uniqLinks;
   }
   return [];
 }

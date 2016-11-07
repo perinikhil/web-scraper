@@ -8,13 +8,14 @@ if (checkArgs()) {
 
   request(url, (err, res, html) => {
     const uniqLinks = requestCallback(err, res, html);
+    console.log(uniqLinks);
 
     // console.time('sync');
     uniqLinks.forEach((link, index) => {
-      if (index < 5) {
+      // if (index < 5) {
         console.log('Fetching from ' + link);
         request(link, requestCallback);
-      }
+      // }
     });
     // console.timeEnd('sync');
   });
